@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation HTML/CSS/JS</title>
+    <!-- IMPORT DE LA LIBRAIRIE JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- IMPORT DU STYLE BOOSTRPAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- IMPORT DES FONTS BOOSTRPAP -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- IMPORT DU STYLE.CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+    <div class="container-fluid">
+
+      <!-- HEADER  -->
+
+      <header>
+
+        <div class="row">
+          <div class="col-md-12 text-center"><h2 class="font-weight-bold">Bienvenue à bord</h2></div>
+          <div class="col-md-12 text-center"><p>Location de voiture 24h/24 et 7j/7</p></div>
+        </div>
+
+        <!-- MENU DÉROULANT -->
+
+        <div id="menu-burger" class="d-flex flex-column justify-content-center">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div id="rideau" class="border">
+          <div class="m-1"><a href="">Louer une voiture</a></div>
+          <div class="m-1"><a href="">Louer un utilitaire</a></div>
+          <div class="m-1"><a href="">Réserver un chauffeur</a></div>
+          <div class="m-1"><a href="">Découvrez nos agences</a></div>
+          <div class="m-1"><a href="">Mon compte</a></div>
+          <div class="m-1"><a href="">Contact</a></div>
+        </div>
+
+        <!-- FORM RESERVATION -->
+        <form>
+          <div class="row col-10 mx-auto p-0" id="reservation">
+
+            <div class="col-md-10 p-0 py-1 bck-grey">
+              <div id="date-part" class="d-flex flex-wrap col-sm-12 col-md-12 pr-0">
+                <div class="border col-12 col-md-3" >
+                  <select name="pets" id="pet-select">
+                    <option value="">Adresse de départ</option>
+                    <option value="1">x</option>
+                    <option value="2">x</option>
+                    <option value="3">x</option>
+                    <option value="4">x</option>
+                    <option value="5">x</option>
+                    <option value="6">x</option>
+                  </select>
+                </div>
+                <div class="border col-12 col-md-3 offset-md-1 middle " ><input type="date" placeholder="Début de location" onClick="$(this).removeClass('placeholderclass')" class="dateclass placeholderclass unstyled"></div>
+                <div class="border col-12 col-md-3 offset-md-1" ><input type="date" placeholder="Fin de location" onClick="$(this).removeClass('placeholderclass')" class="dateclass placeholderclass unstyled"></div>
+              </div>
+            </div>
+
+            <div class="col-md-2" id="btn-validate">
+              <input type="submit" value="Valider ma recherche">
+            </div>
+            
+
+          </div>
+        </form>
+
+      </header>
+
+      <!-- MAIN -->
+      <main>
+
+        <!-- RESULTS & FILTERS -->
+        <div class="row justify-content-center mt-4">
+          <div class="row col-md-8 justify-content-between" >
+
+            <div class="col-3" id="results"> <span class="font-weight-bold">7</span> résultats</div>
+
+            <div class="col-4 col-sm-3" id="filters">
+              <select id="cars">
+                <option value="1">Prix croissants</option>
+                <option value="2">Prix décroissants</option>
+                <option value="3">Meilleurs classement</option>
+                <option value="4">Faible kilométrage</option>
+              </select>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- VEHICULES -->
+
+        <div id="vehicules" class="row flex-column col-12 col-md-8 mx-auto justify-content-center">
+
+          <div class="row border-bottom p-4">
+            <div class="col-6 col-sm-6">
+
+              <div id="carousel1" class="carousel slide" data-interval="false" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://wf3.fr/evaluations/2018/html-css-js-finale/vehicule1.png" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="https://wf3.fr/evaluations/2018/html-css-js-finale/vehicule1.png" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="https://wf3.fr/evaluations/2018/html-css-js-finale/vehicule1.png" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              
+            </div>
+            <div class="col-6 col-sm-6 d-flex flex-column justify-content-center">
+              <h3 class="d-none d-md-block">Peugeot 208</h3>
+              <p class="d-none d-md-block">Diesel 5 portes, GPS, AutoRadio, Forfait 1000km (0,5/km supplémentaire)</p>
+              <p class="d-none d-md-block">999$ - Agence de Paris</p>
+              <button>Réserver et payer</button>
+            </div>
+          </div>
+
+          <div class="row border-bottom p-4">
+            <div class="col-6 col-sm-6">
+
+              <div id="carousel2" class="carousel slide" data-interval="false" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://wf3.fr/evaluations/2018/html-css-js-finale/vehicule2.png" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="https://wf3.fr/evaluations/2018/html-css-js-finale/vehicule2.png" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="https://wf3.fr/evaluations/2018/html-css-js-finale/vehicule2.png" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel2" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+
+            </div>
+            <div class="col-6 col-sm-6 d-flex flex-column justify-content-center">
+              <h3 class="d-none d-md-block">Peugeot 208</h3>
+              <p class="d-none d-md-block">Diesel 5 portes, GPS, AutoRadio, Forfait 1000km (0,5/km supplémentaire)</p>
+              <p class="d-none d-md-block">999$ - Agence de Paris</p>
+              <button>Réserver et payer</button>
+            </div>
+          </div>
+
+          <div class="row border-bottom p-4">
+            <div class="col-6 col-sm-6">
+
+              <div id="carousel3" class="carousel slide" data-interval="false" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://wf3.fr/evaluations/2018/html-css-js-finale/vehicule3.png" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="https://wf3.fr/evaluations/2018/html-css-js-finale/vehicule3.png" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="https://wf3.fr/evaluations/2018/html-css-js-finale/vehicule3.png" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel3" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel3" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+
+            </div>
+            <div class="col-6 col-sm-6 d-flex flex-column justify-content-center">
+              <h3 class="d-none d-md-block">Peugeot 208</h3>
+              <p class="d-none d-md-block">Diesel 5 portes, GPS, AutoRadio, Forfait 1000km (0,5/km supplémentaire)</p>
+              <p class="d-none d-md-block">999$ - Agence de Paris</p>
+              <button>Réserver et payer</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- VEHICULES TO BE LOADED ON SCROLL -->
+
+        <div id="vehicules_to_be_loaded" class="row flex-column col-12 col-md-8 mx-auto justify-content-center">
+
+          <div class="row border-bottom p-4">
+            <div class="col-6 col-sm-6">
+
+              <div id="carousel1" class="carousel slide" data-interval="false" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://wf3.fr/evaluations/2018/html-css-js-finale/vehicule1.png" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="https://wf3.fr/evaluations/2018/html-css-js-finale/vehicule1.png" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="https://wf3.fr/evaluations/2018/html-css-js-finale/vehicule1.png" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              
+            </div>
+            <div class="col-6 col-sm-6 d-flex flex-column justify-content-center">
+              <h3 class="d-none d-md-block">Peugeot 208</h3>
+              <p class="d-none d-md-block">Diesel 5 portes, GPS, AutoRadio, Forfait 1000km (0,5/km supplémentaire)</p>
+              <p class="d-none d-md-block">999$ - Agence de Paris</p>
+              <button>Réserver et payer</button>
+            </div>
+          </div>
+
+          <div class="row border-bottom p-4">
+            <div class="col-6 col-sm-6">
+
+              <div id="carousel2" class="carousel slide" data-interval="false" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://wf3.fr/evaluations/2018/html-css-js-finale/vehicule2.png" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="https://wf3.fr/evaluations/2018/html-css-js-finale/vehicule2.png" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="https://wf3.fr/evaluations/2018/html-css-js-finale/vehicule2.png" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel2" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+
+            </div>
+            <div class="col-6 col-sm-6 d-flex flex-column justify-content-center">
+              <h3 class="d-none d-md-block">Peugeot 208</h3>
+              <p class="d-none d-md-block">Diesel 5 portes, GPS, AutoRadio, Forfait 1000km (0,5/km supplémentaire)</p>
+              <p class="d-none d-md-block">999$ - Agence de Paris</p>
+              <button>Réserver et payer</button>
+            </div>
+          </div>
+
+          <div class="row border-bottom p-4">
+            <div class="col-6 col-sm-6">
+
+              <div id="carousel3" class="carousel slide" data-interval="false" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://wf3.fr/evaluations/2018/html-css-js-finale/vehicule3.png" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="https://wf3.fr/evaluations/2018/html-css-js-finale/vehicule3.png" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="https://wf3.fr/evaluations/2018/html-css-js-finale/vehicule3.png" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel3" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel3" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+
+            </div>
+            <div class="col-6 col-sm-6 d-flex flex-column justify-content-center">
+              <h3 class="d-none d-md-block">Peugeot 208</h3>
+              <p class="d-none d-md-block">Diesel 5 portes, GPS, AutoRadio, Forfait 1000km (0,5/km supplémentaire)</p>
+              <p class="d-none d-md-block">999$ - Agence de Paris</p>
+              <button>Réserver et payer</button>
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+      <!-- FOOTER -->
+
+      <footer class="mt-4">
+          <div class="row col-md-10 mx-auto justify-content-center">
+            <div id="agency" class="col-4 col-sm-2"></div>
+            <div id="agency-info" class="d-flex col-4 col-sm-3">
+              <ul class="d-flex flex-column justify-content-between">
+                <li>Notre agence de <span class="font-weight-bold">Paris</span></li>
+                <li>300 Boulevard de Vaugirard, 75015 Paris</li>
+                <li>Ouvert 7j/7 de 09h à 13h et de 14h à 20h</li>
+                <li>01 49 78 21 33</li>
+                <li>contact@vtc.com</li>
+              </ul>
+            </div>
+          </div>
+      </footer>
+            
+    </div>
+    
+    <!-- IMPORT DU FRAMEWORK BOOSTRAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- IMPORT DU JS  -->
+    <script src="js/app.js"></script>
+</body>
+</html>

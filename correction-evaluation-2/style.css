@@ -1,0 +1,301 @@
+/* HEADER */
+
+header{
+    height: 500px;
+    /* background: no-repeat url('./img/background.jpg'); */
+    width: 100%;
+    background-size: cover;
+}
+
+header > div.row:nth-child(1n){
+    position: relative;
+    top: 60px;
+    z-index: 999;
+    color: white;
+}
+
+#menu-burger{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    z-index: 999;
+    right: 40px;
+    top: 20px;
+    padding: 2px;
+    border-radius: 10%;
+    cursor: pointer;
+    border: 1px solid rgba(221,221,221,0.6);
+}
+
+#menu-burger div {
+    height: 2px;
+    margin: 2px 5px;
+    background-color:grey;
+}
+
+.menu-burger-background{
+    background: rgba(221,221,221,1);
+}
+
+#rideau{
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    top: 62px;
+    left: 0;
+    background: white;
+    height: 180px;
+    display: none;
+
+}
+
+#rideau div a {
+    color: grey;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  opacity: 1;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+}
+
+.carousel-control-prev-icon{
+    transform: rotate(90deg);
+    position: relative;
+    left: -20px;
+}
+.carousel-control-next-icon {
+    transform: rotate(-90deg);
+    position: relative;
+    left: 20px;
+}
+
+/*
+**
+**
+MAIN
+**
+**
+**/
+
+/* FORM RESERVATION */
+
+#reservation{
+    position: relative;
+    top: 300px;
+}
+
+.bck-grey{
+    background-color: rgba(196,194,192,0.75);
+}
+
+#date-part > div{
+    height: 40px;
+    padding: 0;
+}
+
+#date-part select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: white;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 7px;
+    border: 1px solid #dfdfdf;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    font-size:14px;
+    color:grey;
+    padding-left: 12px;
+    border: 0;
+}  
+
+#btn-validate{
+    background-color: rgba(91,160,82,0.75);
+    padding: 0;
+}
+
+#btn-validate input[type=submit]{
+    height: 100%;
+    background:rgba(39, 174, 96, 0.8);
+    border:0;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    cursor: pointer;
+}
+
+input[type="date"] {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    color: grey;
+    padding-left: 15px;
+    font-size: 14px;
+}
+  
+input[type="date"]:after {
+    color: transparent;
+    background: rgba(238, 238, 238, 0.8);
+    display: block;
+    font-family: 'FontAwesome';
+    content: '\f073';
+    position: absolute;
+    right: 0px;
+    color: black;
+    padding-left: 8px;
+    padding-top: 10px;
+    width: 30px;
+    height: 100%;
+}
+
+.dateclass.placeholderclass::before {
+    width: 100%;
+    content: attr(placeholder);
+    color: grey;
+}
+
+.dateclass.placeholderclass:hover::before {
+    width: 0%;
+    content: "";
+}
+
+.unstyled::-webkit-inner-spin-button{
+/* .unstyled::-webkit-calendar-picker-indicator { */
+    display: none;
+    -webkit-appearance: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: transparent;
+    background: none;
+    z-index: 1;
+}
+
+/* RESULTS & FILTERS */
+
+#results, #filters{
+    height: 40px;
+}
+
+/* VEHICULES */
+
+select{
+    width: 100%;
+}
+
+button{
+    width: fit-content;
+    background:#53ad53;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    padding: 0.4em;
+}
+
+#cars {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    width: fit-content;
+    font-size:14px;
+    padding-left: 14px;
+}  
+
+#vehicules_to_be_loaded{
+    display: none;
+}
+
+/* FOOTER */
+
+footer ul{
+    list-style: none;
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+footer #agency{
+    background: no-repeat url('./img/agence.jpg');
+    height: 100px;
+    background-size: cover;
+}
+
+/* 
+**
+**
+** FORMAT TABLETS && FORMAT SMART PHONES
+**
+**
+*/
+
+@media only screen and (max-width: 768px) {
+
+
+    #filters{
+        margin-top: 50px;
+    }
+
+    #btn-validate{
+        height: 40px;
+    }
+
+    #date-part{
+        padding-left: 0;
+    }
+
+}
+
+/* 
+**
+**
+** FORMAT TABLETS ONLY
+**
+**
+*/
+
+@media (min-width: 500px) and (max-width: 767px) {
+  
+    #reservation{
+        padding: 0!important;
+        margin: 15px;
+    }
+    #date-part{
+        justify-content: space-around;
+    }
+    #date-part > div{
+        max-width: 32%;
+    }
+    
+}
+
+/* 
+**
+**
+** FORMAT SMART PHONES ONLY
+**
+**
+*/
+@media (max-width: 500px){
+    #date-part > div{
+        max-width: 98%;
+    }
+
+    #reservation{
+        top: 200px;
+    }
+
+    .middle {
+        margin: 5px 0;
+    }
+}

@@ -1,0 +1,85 @@
+#navbar-list{
+    background-color: white;
+    padding-left: 15px;
+ 
+ }
+
+/**header**/
+header{
+  /*background-image: url("../img/background.jpg");*/
+    background-position: left center;
+    background-size: cover;
+    color: white;
+    height: 400px;
+    height: 50vh;
+  }
+
+
+  #titre {
+    position: relative;
+  }
+
+#formulaire {
+      position: absolute;
+      bottom: 60px;
+  }
+.form-inline {
+  width: 1000px;
+}  
+
+#formulaire .form-group {
+    background-color: rgba(183, 183, 183, 0.6);
+    padding-right: 40px;
+  }
+
+
+#formulaire button {
+    border-radius: 0;
+    padding: 10px;
+
+  }
+  
+
+#resultats {
+	display: flex;
+	justify-content: space-between;
+}
+
+.load-carousel-on-scroll{
+	display: none;
+}
+
+
+
+
+/****footer***/
+footer {
+	line-height: 30px;
+	text-align: center;
+  margin: auto;
+}
+#imgAgence {
+    background-image: url(../img/agence.jpg);
+    width: 200px;
+    height:200px;
+    background-size: cover;
+    display: inline-block;
+    margin-right: 70px;
+}
+
+#contact{
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
